@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motivasi untuk Bestie</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; margin: 50px; }
+        #nameBox, #messageBox { display: none; }
+        .container { max-width: 400px; margin: auto; padding: 20px; border: 1px solid #ddd; border-radius: 10px; }
+    </style>
+</head>
+<body>
+    <div class="container" id="inputBox">
+        <h2>Hai Bestie! Masukkan namamu dulu 😊</h2>
+        <input type="text" id="nameInput" placeholder="Nama kamu...">
+        <button onclick="showMessage()">Masuk</button>
+    </div>
+    
+    <div class="container" id="messageBox">
+        <h2 id="greeting"></h2>
+        <p>Jangan lupa, hidup itu indah. Keep shining, don't overthink too much! 🌟</p>
+        <p>Semangat terus! Challenges will make you stronger. 💪</p>
+        <p>Karena kamu Valentine ga ada yang ngucapin, biar aku aja yang ngucapin: Happy Valentine, Bestie! ❤️</p>
+    </div>
+    
+    <script>
+        function showMessage() {
+            var name = document.getElementById("nameInput").value;
+            if (name.trim() !== "") {
+                document.getElementById("greeting").innerText = "Hello " + name + ", you got this!";
+                document.getElementById("inputBox").style.display = "none";
+                document.getElementById("messageBox").style.display = "block";
+            } else {
+                alert("Masukkan nama dulu bestie!");
+            }
+        }
+    </script>
+</body>
+</html>
